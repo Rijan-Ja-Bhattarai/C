@@ -1,6 +1,28 @@
 #include <stdio.h>
+#include  <stdbool.h>
 int main(void) {
-    printf("To C, or not to C, that is the question \n");
-    printf("Hello Twin \n");
+    /*
+     *          *
+     *         *
+     *        *
+     *  *    *
+     *   *  *
+     *     *
+     */
+    // Print Spaces
+    for (int j = 6; j >= 0; j--) {
+        printf("%*c", j, ' ');
+        if (j <= 3) {
+            printf("%*c", 3 - j, ' ');
+            printf("*");
+            printf("%*c", j * 5, ' ');
+            printf("*\n");
+        }
+        else {
+            printf("%*c", j * 5, ' ');
+            printf("*\n");
+        }
+
+    }
     return 0;
 }
